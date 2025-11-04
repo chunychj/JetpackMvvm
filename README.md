@@ -8,15 +8,12 @@
 [6]:https://github.com/hegaojian/JetpackMvvm/blob/master/LICENSE
 
 # 🏗 JetpackMvvm
-
 **JetpackMvvm** 是一个基于 Jetpack 架构组件构建的 Android MVVM 快速开发框架，旨在帮助开发者快速搭建高质量、可维护、可扩展的应用。
-
 ---
-
 ## ✨ 框架特性
 
 - 🧠 **标准化 MVVM 架构设计**  
-  基于 ViewModel、LiveData、Repository 的分层体系，提供清晰、可维护的应用结构。
+  基于 ViewModel、LiveData、Kotlin Flow、Repository 的分层体系，提供清晰、可维护的应用结构。
 
 - ⚡ **协程驱动的响应式数据流**  
   全面采用 Kotlin Coroutines 进行异步管理，天然支持挂起函数与结构化并发。
@@ -40,23 +37,23 @@
   基于**玩Android API** 开发了一个示例,注释非常详细，App展示框架在真实项目中的使用方式与开发流程。
 ---
 
-## 📦 玩Android APK 下载体验
-
+## 📦 玩Android示例App下载体验
 ### 🔗 下载渠道
-
 - [🌍 GitHub 下载](https://github.com/hegaojian/JetpackMvvm/releases/download/2.0.0/app-release.apk)
-- [🚀 第三方下载（推荐）](https://www.pgyer.com/jjbeautiful)
-
+- [🚀 第三方下载](https://www.pgyer.com/jjbeautiful)
 ### 📱 扫码下载（推荐）
-
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/288a73f1-2e10-404a-8fc5-2acb9b1799ed" width="300" height="300" alt="JetpackMvvm Demo 二维码"/>
+  <img src="https://github.com/user-attachments/assets/288a73f1-2e10-404a-8fc5-2acb9b1799ed" width="150" height="150" alt="JetpackMvvm Demo 二维码"/>
 </p>
 
+## 🚀 版本依赖
 ```gradle
 dependencies {
-    implementation 'com.github.hegaojian:JetpackMvvm:2.0.0'
+    implementation 'com.github.hegaojian:JetpackMvvm:2.0.1'
 }
+```
+``` 
+JetpackMvvm.init(application)
 ```
 ## 📖 目录导航
 
@@ -70,9 +67,13 @@ dependencies {
 
 ## 💬 联系与支持
 
-- 💡 欢迎通过 [Issues](https://github.com/hegaojian/JetpackMvvm/issues) 提交问题或建议  
+- 💡 欢迎通过 [Issues](https://github.com/hegaojian/JetpackMvvm/issues) 提交问题或建议
 - ❤️ 如果这个框架帮助到你，请帮忙点一个 ⭐ 支持一下  
-- 📫 QQ交流群：419581249
+- 🌍 承接**App外包项目**，有需求可以联系我。帮人介绍的话可以给你**返点**😆
+
+| QQ交流群 | 个人微信 | 个人QQ |
+|------|------|------|
+| <img width="150" height="150" src="https://github.com/user-attachments/assets/faf8684d-790a-4b3d-8d21-6221a350d639" alt="QQ群二维码"/> | <img width="150" height="150" src="https://github.com/user-attachments/assets/ef751c37-373e-45c5-b37c-f1d523d3aa67" alt="微信二维码"/>  |<img width="150" height="150" src="https://github.com/user-attachments/assets/faf8684d-790a-4b3d-8d21-6221a350d639" alt="QQ群二维码"/>  |
 
 ---
 ## License
