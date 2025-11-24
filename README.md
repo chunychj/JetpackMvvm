@@ -45,7 +45,7 @@
 ## 🚀 版本依赖
 ```gradle
 dependencies {
-    implementation 'com.github.hegaojian:JetpackMvvm:2.0.1'
+    implementation 'com.github.hegaojian:JetpackMvvm:2.0.2'
 }
 ```
 ``` 
