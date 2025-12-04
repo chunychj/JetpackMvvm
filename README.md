@@ -1,4 +1,4 @@
-[![Platform][1]][2] [![GitHub license][3]][4]  [![GitHub license][5]][6] 
+[![Platform][1]][2] [![GitHub license][3]][4]  [![GitHub license][5]][6]  ![](https://komarev.com/ghpvc/?username=hegaojian&color=brightgreen)
 
 [1]:https://img.shields.io/badge/platform-Android-blue.svg  
 [2]:https://github.com/hegaojian/JetpackMvvm
@@ -45,7 +45,7 @@
 ## 🚀 版本依赖
 ```gradle
 dependencies {
-    implementation 'com.github.hegaojian:JetpackMvvm:2.0.1'
+    implementation 'com.github.hegaojian:JetpackMvvm:2.0.2'
 }
 ```
 ``` 
