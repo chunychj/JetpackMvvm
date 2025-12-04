@@ -1,16 +1,21 @@
 package me.hgj.jetpackmvvm.demo.ui.activity
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.webkit.WebResourceError
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.MenuProvider
 import com.just.agentweb.AgentWeb
+import com.just.agentweb.WebViewClient
 import me.hgj.jetpackmvvm.core.data.obs
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BaseActivity
@@ -176,6 +181,7 @@ class WebActivity : BaseActivity<WebViewModel, ActivityWebBinding>() {
         preWeb = AgentWeb.with(this)
             .setAgentWebParent(mBind.webContent, LinearLayout.LayoutParams(-1, -1))
             .useDefaultIndicator()
+            .interceptUnkownUrl()
             .createAgentWeb()
             .ready()
         //加载网页
