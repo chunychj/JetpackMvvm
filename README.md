@@ -71,7 +71,6 @@ JetpackMvvm.init(application)
 
 - 💡 欢迎通过 [Issues](https://github.com/hegaojian/JetpackMvvm/issues) 提交问题或建议
 - ❤️ 如果这个框架帮助到你，请帮忙点一个 ⭐ 支持一下  
-- 🌍 承接**App外包项目**，有需求可以联系我。帮人介绍的话可以给你**返点**😆
 
 | QQ交流群 | 微信交流群 | 个人微信 | 个人QQ |
 |------|------|------|------|
