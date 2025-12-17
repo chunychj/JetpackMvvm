@@ -13,6 +13,7 @@ import me.hgj.jetpackmvvm.demo.data.model.entity.ApiPagerResponse
 import me.hgj.jetpackmvvm.demo.data.model.entity.CollectBus
 import me.hgj.jetpackmvvm.demo.data.model.entity.CollectResponse
 import me.hgj.jetpackmvvm.demo.data.vm.CollectViewModel
+import me.hgj.jetpackmvvm.demo.databinding.IncludeRecyclerviewBinding
 import me.hgj.jetpackmvvm.demo.databinding.ItemAriticleBinding
 import me.hgj.jetpackmvvm.demo.databinding.ItemProjectBinding
 import me.hgj.jetpackmvvm.demo.ui.activity.WebActivity
@@ -29,7 +30,10 @@ import me.hgj.jetpackmvvm.util.decoration.DividerOrientation
  * 时间　: 2020/3/10
  * 描述　: 收藏的文章集合Fragment
  */
-class CollectArticleFragment : BasePageListFragment<CollectViewModel, CollectResponse>() {
+class CollectArticleFragment : BasePageListFragment<CollectViewModel, IncludeRecyclerviewBinding,CollectResponse>() {
+
+    override fun bindIncludeList() = mBind.root
+
     override fun provideRequest(
         isRefresh: Boolean,
         loadingXml: Boolean

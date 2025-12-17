@@ -15,6 +15,7 @@ import me.hgj.jetpackmvvm.demo.data.model.entity.ApiPagerResponse
 import me.hgj.jetpackmvvm.demo.data.model.entity.ArticleResponse
 import me.hgj.jetpackmvvm.demo.data.model.entity.BannerResponse
 import me.hgj.jetpackmvvm.demo.data.vm.ShareViewModel
+import me.hgj.jetpackmvvm.demo.databinding.IncludeRecyclerviewBinding
 import me.hgj.jetpackmvvm.demo.databinding.ItemShareAriticleBinding
 import me.hgj.jetpackmvvm.demo.ui.activity.WebActivity
 import me.hgj.jetpackmvvm.demo.ui.fragment.MainFragmentDirections
@@ -28,11 +29,13 @@ import me.hgj.jetpackmvvm.util.decoration.DividerOrientation
  * 时间　: 2020/3/2
  * 描述　: 我分享的文章
  */
-class ArticleFragment : BasePageListFragment<ShareViewModel, ArticleResponse>() {
+class ArticleFragment : BasePageListFragment<ShareViewModel, IncludeRecyclerviewBinding,ArticleResponse>() {
 
     override val showTitle = true
 
     override val title = "我分享的文章"
+
+    override fun bindIncludeList() = mBind.root
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)

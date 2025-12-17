@@ -11,10 +11,11 @@ import me.hgj.jetpackmvvm.demo.app.core.ext.nav
 import me.hgj.jetpackmvvm.demo.app.core.util.LocalDataUtil
 import me.hgj.jetpackmvvm.demo.data.model.entity.ClassifyResponse
 import me.hgj.jetpackmvvm.demo.data.model.entity.SystemResponse
+import me.hgj.jetpackmvvm.demo.data.vm.TreeViewModel
 import me.hgj.jetpackmvvm.demo.databinding.FlowLayoutBinding
+import me.hgj.jetpackmvvm.demo.databinding.IncludeRecyclerviewBinding
 import me.hgj.jetpackmvvm.demo.databinding.ItemSystemBinding
 import me.hgj.jetpackmvvm.demo.ui.fragment.MainFragmentDirections
-import me.hgj.jetpackmvvm.demo.data.vm.TreeViewModel
 import me.hgj.jetpackmvvm.ext.util.toHtml
 import me.hgj.jetpackmvvm.ext.view.divider
 import me.hgj.jetpackmvvm.ext.view.flex
@@ -26,7 +27,9 @@ import me.hgj.jetpackmvvm.util.decoration.DividerOrientation
  * 时间　: 2020/3/3
  * 描述　: 体系
  */
-class SystemFragment : BaseListFragment<TreeViewModel, SystemResponse>() {
+class SystemFragment : BaseListFragment<TreeViewModel, IncludeRecyclerviewBinding,SystemResponse>() {
+
+    override fun bindIncludeList() = mBind.root
 
     override fun provideRequest(
         isRefresh: Boolean,

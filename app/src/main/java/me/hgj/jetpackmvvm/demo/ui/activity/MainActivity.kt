@@ -23,11 +23,6 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
     var exitTime = 0L
 
     override fun initView(savedInstanceState: Bundle?) {
-        //全面屏
-        enableEdgeToEdge()
-        //设置状态栏字体颜色为白色
-        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
-
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 val nav = findNavController(R.id.host_fragment)

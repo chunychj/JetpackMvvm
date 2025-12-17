@@ -1,5 +1,4 @@
 package me.hgj.jetpackmvvm.demo.data.vm
-
 import me.hgj.jetpackmvvm.base.vm.BaseViewModel
 import me.hgj.jetpackmvvm.core.data.request
 import me.hgj.jetpackmvvm.core.data.requestFlow

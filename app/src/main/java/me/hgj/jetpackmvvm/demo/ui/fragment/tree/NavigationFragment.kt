@@ -14,6 +14,7 @@ import me.hgj.jetpackmvvm.demo.data.model.entity.NavigationResponse
 import me.hgj.jetpackmvvm.demo.databinding.FlowLayoutBinding
 import me.hgj.jetpackmvvm.demo.databinding.ItemSystemBinding
 import me.hgj.jetpackmvvm.demo.data.vm.TreeViewModel
+import me.hgj.jetpackmvvm.demo.databinding.IncludeRecyclerviewBinding
 import me.hgj.jetpackmvvm.demo.ui.activity.WebActivity
 import me.hgj.jetpackmvvm.ext.util.toHtml
 import me.hgj.jetpackmvvm.ext.view.divider
@@ -26,7 +27,9 @@ import me.hgj.jetpackmvvm.util.decoration.DividerOrientation
  * 时间　: 2020/3/3
  * 描述　: 导航
  */
-class NavigationFragment : BaseListFragment<TreeViewModel, NavigationResponse>() {
+class NavigationFragment : BaseListFragment<TreeViewModel, IncludeRecyclerviewBinding,NavigationResponse>() {
+
+    override fun bindIncludeList() = mBind.root
 
     override fun provideRequest(
         isRefresh: Boolean,

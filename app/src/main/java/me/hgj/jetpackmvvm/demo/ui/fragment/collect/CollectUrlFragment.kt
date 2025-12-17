@@ -1,20 +1,20 @@
 package me.hgj.jetpackmvvm.demo.ui.fragment.collect
 
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.drake.brv.utils.bindingAdapter
 import com.drake.brv.utils.setup
 import me.hgj.jetpackmvvm.core.data.ApiResult
 import me.hgj.jetpackmvvm.core.data.obs
-import me.hgj.jetpackmvvm.demo.MainNavigationDirections
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BaseListFragment
 import me.hgj.jetpackmvvm.demo.app.event.EventViewModel
-import me.hgj.jetpackmvvm.demo.app.core.ext.nav
 import me.hgj.jetpackmvvm.demo.app.core.widget.customview.CollectView
 import me.hgj.jetpackmvvm.demo.data.model.entity.CollectUrlResponse
 import me.hgj.jetpackmvvm.demo.databinding.ItemCollecturlBinding
 import me.hgj.jetpackmvvm.demo.data.vm.CollectViewModel
+import me.hgj.jetpackmvvm.demo.databinding.IncludeRecyclerviewBinding
 import me.hgj.jetpackmvvm.demo.ui.activity.WebActivity
 import me.hgj.jetpackmvvm.ext.util.toast
 import me.hgj.jetpackmvvm.ext.view.divider
@@ -26,7 +26,7 @@ import me.hgj.jetpackmvvm.util.decoration.DividerOrientation
  * 时间　: 2020/3/10
  * 描述　: 收藏的文章集合Fragment
  */
-class CollectUrlFragment : BaseListFragment<CollectViewModel, CollectUrlResponse>() {
+class CollectUrlFragment : BaseListFragment<CollectViewModel, IncludeRecyclerviewBinding,CollectUrlResponse>() {
 
     override fun provideRequest(
         isRefresh: Boolean,
@@ -34,6 +34,8 @@ class CollectUrlFragment : BaseListFragment<CollectViewModel, CollectUrlResponse
     ): LiveData<ApiResult<ArrayList<CollectUrlResponse>>> {
         return mViewModel.getCollectUrlData(refresh = isRefresh, loadingXml = loadingXml)
     }
+
+    override fun bindIncludeList() = mBind.root
 
     override fun setupAdapter(rv: RecyclerView) {
         rv.vertical().divider {

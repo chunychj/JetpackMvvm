@@ -1,33 +1,34 @@
-package me.hgj.jetpackmvvm.demo.ui.fragment.integral
+package me.hgj.jetpackmvvm.demo.ui.activity
 
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.drake.brv.utils.setup
 import me.hgj.jetpackmvvm.core.data.ApiResult
 import me.hgj.jetpackmvvm.demo.R
-import me.hgj.jetpackmvvm.demo.app.core.base.BasePageListFragment
+import me.hgj.jetpackmvvm.demo.app.core.base.BasePageListActivity
 import me.hgj.jetpackmvvm.demo.app.core.util.DatetimeUtil
 import me.hgj.jetpackmvvm.demo.data.model.entity.ApiPagerResponse
 import me.hgj.jetpackmvvm.demo.data.model.entity.IntegralHistoryResponse
-import me.hgj.jetpackmvvm.demo.databinding.ItemIntegralHistoryBinding
 import me.hgj.jetpackmvvm.demo.data.vm.IntegralViewModel
-import me.hgj.jetpackmvvm.demo.databinding.IncludeRecyclerviewBinding
+import me.hgj.jetpackmvvm.demo.databinding.ActivityTestListBinding
+import me.hgj.jetpackmvvm.demo.databinding.ItemIntegralHistoryBinding
 import me.hgj.jetpackmvvm.ext.view.divider
 import me.hgj.jetpackmvvm.ext.view.vertical
 import me.hgj.jetpackmvvm.util.decoration.DividerOrientation
 
 /**
- * 作者　: hegaojian
- * 时间　: 2020/3/2
- * 描述　: 积分排行
+ * 作者　：hegaojian
+ * 时间　：2025/12/17
+ * 说明　：
  */
-class IntegralHistoryFragment : BasePageListFragment<IntegralViewModel, IncludeRecyclerviewBinding,IntegralHistoryResponse>() {
+class TestListActivity : BasePageListActivity<IntegralViewModel, ActivityTestListBinding,IntegralHistoryResponse>() {
 
     override val showTitle = true
 
     override val title = "积分记录"
 
-    override fun bindIncludeList() = mBind.root
+    override fun bindIncludeList() = mBind.include.root
 
     override fun provideRequest(
         isRefresh: Boolean,
@@ -54,4 +55,7 @@ class IntegralHistoryFragment : BasePageListFragment<IntegralViewModel, IncludeR
         }
     }
 
+    override fun getLoadingView(): View? {
+        return mBind.include.root
+    }
 }

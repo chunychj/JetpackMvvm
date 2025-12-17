@@ -56,6 +56,11 @@
             android:label="网页"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TestListActivity"
+            android:label="测试分页"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
 
         <!-- Arms 配置 -->
         <meta-data

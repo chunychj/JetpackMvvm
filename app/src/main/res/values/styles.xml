@@ -13,7 +13,8 @@
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
 
         <!-- 导航栏 -->
-        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/windowBackground</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
 
         <!-- 背景 -->
         <item name="android:windowBackground">@color/windowBackground</item>
